@@ -23,15 +23,14 @@ a {
     --heroBanner-bgcolor: #dcdcdc;
     --heroBanner-button-bgcolor: #f02d34;
     --heroBanner-button-color: white;
-    --heroBanner-headlight-color:white;
+    --heroBanner-headlight-color: white;
 
-    --product-image-bg-color:#ebebeb;
-    --produkt-price-color:black;
+    --product-image-bg-color: #ebebeb;
+    --produkt-price-color: black;
 }
 
 .layout {
     padding: 10px;
-
 
     .main-container {
         max-width: 1400px;
@@ -101,33 +100,33 @@ a {
     justify-content: center;
     gap: 15px;
     margin-top: 20px;
-    width: 100%;
+    width: 100%;  
+}
 
-    .product-card {
-        cursor: pointer;
+.product-card {
+    cursor: pointer;
+    transform: scale(1, 1);
+    transition: transform 0.5s ease;
+    color: var(--products-heading-color);
+
+    .product-image {
+        border-radius: 15px;
+        background-color: var(--product-image-bg-color);
         transform: scale(1, 1);
         transition: transform 0.5s ease;
-        color: var(--products-heading-color);
-    
-        .product-image {
-            border-radius: 15px;
-            background-color: var(--product-image-bg-color);
-            transform: scale(1, 1);
-            transition: transform 0.5s ease;
-        }
-    
-        .product-name {
-            font-weight: 500;
-        }
-        .product-price {
-            font-weight: 800;
-            margin-top: 6px;
-            color: var(--produkt-price-color);
-        }
     }
-    .product-card:hover {
-        transform: scale(1.1, 1.1);
+
+    .product-name {
+        font-weight: 500;
     }
+    .product-price {
+        font-weight: 800;
+        margin-top: 6px;
+        color: var(--produkt-price-color);
+    }
+}
+.product-card:hover {
+    transform: scale(1.1, 1.1);
 }
 
 .footer-banner-container {
@@ -187,8 +186,6 @@ a {
         }
     }
 }
-
-
 
 .hero-banner-container {
     padding: 100px 40px;
@@ -260,6 +257,209 @@ a {
     }
 }
 
+.product-detail-container {
+    display: flex;
+    gap: 40px;
+    margin: 40px;
+    margin-top: 60px;
+    color: #324d67;
+
+    .image-container{
+        .product-detail-image {
+            border-radius: 15px;
+            background-color: #ebebeb;
+        
+            width: 400px;
+            height: 400px;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+        }
+
+        .product-detail-image:hover {
+            background-color: #f02d34;
+        }
+    }
+
+
+    .small-images-container {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+
+        .small-image {
+            border-radius: 8px;
+            background-color: #ebebeb;
+            width: 70px;
+            height: 70px;
+            cursor: pointer;
+        }
+
+        .selected-image {
+            background-color: #f02d34;
+        }
+    }
+    
+
+    .product-detail-desc {
+
+
+        .reviews {
+            color: #f02d34;
+            margin-top: 10px;
+            display: flex;
+            gap: 5px;
+            align-items: center;
+
+            p {
+                color: #324d67;
+                margin-top: 0px;
+            }
+        }
+        p {
+            margin-top: 10px;
+        }
+
+        h4 {
+            margin-top: 10px;
+        }
+
+        .price {
+            font-weight: 700;
+            font-size: 26px;
+            margin-top: 30px;
+            color: #f02d34;
+        }
+
+        .quantity {
+            display: flex;
+            gap: 20px;
+            margin-top: 10px;
+            align-items: center;
+            h3{
+                margin-top: 6px;
+            }
+
+            .quantity-desc {
+                border: 1px solid gray;
+                padding: 6px;
+                align-items: center;
+
+                
+
+                span {
+                    font-size: 16px;
+                    padding: 6px 12px;
+                    cursor: pointer;
+                    
+                }
+                .minus {
+                    color: #f02d34;
+                }
+                .num {
+                    border-left: 1px solid gray;
+                    border-right: 1px solid gray;
+                    font-size: 20px;
+                }
+                .plus {
+                    color: rgb(49, 168, 49);
+                }
+            }
+        }
+
+        .buttons {
+            display: flex;
+            gap: 30px;
+
+            .add-to-cart {
+                padding: 10px 20px;
+                border: 1px solid #f02d34;
+                margin-top: 40px;
+                font-size: 18px;
+                font-weight: 500;
+                background-color: white;
+                color: #f02d34;
+                cursor: pointer;
+                width: 200px;
+                transform: scale(1, 1);
+                transition: transform 0.5s ease;
+            }
+
+            .add-to-cart:hover {
+                transform: scale(1.1, 1.1);
+            }
+
+            .buy-now {
+                width: 200px;
+            
+                padding: 10px 20px;
+                background-color: #f02d34;
+                color: white;
+                border: none;
+                margin-top: 40px;
+                font-size: 18px;
+                font-weight: 500;
+                cursor: pointer;
+                transform: scale(1, 1);
+                transition: transform 0.5s ease;
+            }
+
+            .buy-now:hover {
+                transform: scale(1.1, 1.1);
+            }
+        }
+        
+    }
+}
+
+.maylike-products-wrapper{
+    margin-top: 120px;
+
+    h2 {
+        text-align: center;
+        margin: 50px;
+        color: #324d67;
+    
+        font-size: 28px;
+    }
+    .marquee {
+        position: relative;
+        height: 400px;
+        width: 100%;
+        overflow-x: hidden;
+
+        .maylike-products-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .track {
+            position: absolute;
+            white-space: nowrap;
+            will-change: transform;
+            animation: marquee 15s linear infinite;
+            width: 180%;
+        }
+
+        .track:hover {
+            animation-play-state: paused;
+        }
+        
+        @keyframes marquee {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-50%);
+            }
+        }
+    }
+}
+
+
+
+
 .footer-container {
     color: #324d67;
     text-align: center;
@@ -271,7 +471,6 @@ a {
     align-items: center;
     gap: 10px;
     justify-content: center;
-
 
     .icons {
         font-size: 30px;
