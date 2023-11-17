@@ -11,10 +11,9 @@ body,
     width: 0px;
 }
 
-:root{
+:root {
     --products-heading-color: #324d67;
     --products-p-color: #5f5f5f;
-
 
     --heroBanner-bgcolor: #dcdcdc;
     --heroBanner-button-bgcolor: #f02d34;
@@ -48,21 +47,26 @@ body,
 
 .hero-banner-container {
     padding: 100px 40px;
-    background-color:var(--heroBanner-bgcolor);
+    background-color: var(--heroBanner-bgcolor);
     border-radius: 15px;
     position: relative;
     height: 500px;
     line-height: 0.9;
     width: 100%;
 
-
-    .beats-solo {
+    .hero-banner-upper-text {
         font-size: 20px;
     }
 
     h3 {
         font-size: 4rem;
         margin-top: 4px;
+    }
+    h1 {
+        color: white;
+        font-size: 10em;
+        margin-left: -20px;
+        text-transform: uppercase;
     }
 
     .hero-banner-image {
@@ -77,7 +81,7 @@ body,
         border-radius: 15px;
         padding: 10px 16px;
         background-color: var(--heroBanner-button-bgcolor);
-        color:  var(--heroBanner-button-color);
+        color: var(--heroBanner-button-color);
         border: none;
         margin-top: 40px;
         font-size: 18px;
@@ -109,5 +113,4 @@ body,
             text-align: end;
         }
     }
-    
 }
