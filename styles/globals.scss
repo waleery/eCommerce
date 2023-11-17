@@ -1,0 +1,113 @@
+html,
+body,
+* {
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+:root{
+    --products-heading-color: #324d67;
+    --products-p-color: #5f5f5f;
+
+
+    --heroBanner-bgcolor: #dcdcdc;
+    --heroBanner-button-bgcolor: #f02d34;
+    --heroBanner-button-color: white;
+}
+
+.products-heading {
+    text-align: center;
+    margin: 40px 0px;
+    color: var(--products-heading-color);
+
+    h2 {
+        font-size: 40px;
+        font-weight: 800;
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: 200;
+    }
+}
+
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.hero-banner-container {
+    padding: 100px 40px;
+    background-color:var(--heroBanner-bgcolor);
+    border-radius: 15px;
+    position: relative;
+    height: 500px;
+    line-height: 0.9;
+    width: 100%;
+
+
+    .beats-solo {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 4rem;
+        margin-top: 4px;
+    }
+
+    .hero-banner-image {
+        position: absolute;
+        top: 0%;
+        right: 20%;
+        width: 450px;
+        height: 450px;
+    }
+
+    button {
+        border-radius: 15px;
+        padding: 10px 16px;
+        background-color: var(--heroBanner-button-bgcolor);
+        color:  var(--heroBanner-button-color);
+        border: none;
+        margin-top: 40px;
+        font-size: 18px;
+        font-weight: 500;
+        cursor: pointer;
+        z-index: 5 !important;
+    }
+
+    .desc {
+        position: absolute;
+        right: 10%;
+        bottom: 5%;
+        width: 300px;
+        line-height: 1.3;
+        display: flex;
+        flex-direction: column;
+        color: var(--products-heading-color);
+
+        h5 {
+            margin-bottom: 12px;
+            font-weight: 700;
+            font-size: 16px;
+            align-self: flex-end;
+        }
+
+        p {
+            color: var(--products-p-color);
+            font-weight: 100;
+            text-align: end;
+        }
+    }
+    
+}
