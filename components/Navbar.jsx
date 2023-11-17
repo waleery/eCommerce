@@ -7,7 +7,7 @@ const Navbar = () => {
     return (
         <div className="navbar-container">
             <p className="logo">
-                <Link href="/">Store</Link>
+                <Link href="/">Waleery Store</Link>
             </p>
 
             <button type="button" className="cart-icon" onCanPlay=''>
