@@ -1,5 +1,5 @@
 import { toast } from "react-hot-toast";
-import React, { createContext, useState } from "react";
+import React, { createContext, useContext, useState } from "react";
 
 const Context = createContext();
 
@@ -38,3 +38,5 @@ export const StateContext = ({ children }) => {
         </Context.Provider>
     );
 };
+
+export const useStateContext = () => useContext(Context)
