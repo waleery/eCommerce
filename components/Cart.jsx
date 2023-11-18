@@ -9,7 +9,7 @@ import { urlFor } from "@/lib/client";
 
 const Cart = () => {
     const cartRef = useRef();
-    const { totalPrice, totalQuantities, cartItems, setShowCart } =
+    const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuantity } =
         useStateContext();
 
     return (
@@ -60,24 +60,23 @@ const Cart = () => {
                                             <p className="quantity-desc">
                                                 <span
                                                     className="minus"
-                                                    onClick=''
+                                                    onClick={() => item.quantity >= 2 && toggleCartItemQuantity(item._id, 'dec')}
                                                 >
                                                     <AiOutlineMinus />
                                                 </span>
                                                 <span
                                                     className="num"
-                                                    onClick=''
                                                 >
-                                                    0
+                                                    {item.quantity}
                                                 </span>
                                                 <span
                                                     className="plus"
-                                                    onClick=''
+                                                    onClick={() =>toggleCartItemQuantity(item._id, 'inc')}
                                                 >
                                                     <AiOutlinePlus />
                                                 </span>
                                             </p>
-                                            <button type="button" className="remove-item" onClick=''><TiDeleteOutline /> </button>
+                                            <button type="button" className="remove-item" ><TiDeleteOutline /> </button>
                                         </div>
                                     </div>
                                 </div>
@@ -91,7 +90,7 @@ const Cart = () => {
                       <h3>${totalPrice}</h3>
                     </div>
                     <div className="btn-container">
-                      <button type="button" className="btn" onClick="">
+                      <button type="button" className="btn" >
                         Pay with Stripe
                       </button>
                     </div>
