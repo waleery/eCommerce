@@ -6,7 +6,7 @@ import { AiOutlineLeft, AiOutlineMinus, AiOutlinePlus, AiOutlineShopping } from 
 import {TiDeleteOutline} from 'react-icons/ti'
 import Link from "next/link";
 import { urlFor } from "@/lib/client";
-import getStripe from "@/pages/api/getStripe";
+import getStripe from "@/lib/getStripe";
 
 const Cart = () => {
     const cartRef = useRef();
