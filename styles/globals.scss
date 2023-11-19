@@ -414,6 +414,7 @@ a {
 .maylike-products-wrapper {
     margin-top: 120px;
 
+
     h2 {
         text-align: center;
         margin: 50px;
@@ -421,40 +422,18 @@ a {
 
         font-size: 28px;
     }
-    .marquee {
-        position: relative;
-        height: 400px;
-        width: 100%;
-        overflow-x: hidden;
 
-        .maylike-products-container {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 20px;
-        }
+    .marquee{
+        overflow: hidden;
+        min-height: 350px;
 
-        .track {
-            position: absolute;
-            white-space: nowrap;
-            will-change: transform;
-            animation: marquee 15s linear infinite;
-            width: 180%;
-        }
+        .marquee-product{
+            padding: 10px;
 
-        .track:hover {
-            animation-play-state: paused;
-        }
-
-        @keyframes marquee {
-            from {
-                transform: translateX(0);
-            }
-            to {
-                transform: translateX(-50%);
-            }
         }
     }
+
+
 }
 
 .cart-wrapper {
@@ -693,7 +672,7 @@ a {
             font-size: 40px;
         }
 
-        .icon-cancel{
+        .icon-cancel {
             color: red;
             font-size: 40px;
         }
@@ -979,10 +958,10 @@ a {
             h2 {
                 font-size: 20px;
             }
-            .descripton  {
+            .descripton {
                 font-size: 14px !important;
             }
-            button{
+            button {
                 font-size: 15px !important;
             }
         }
@@ -1029,7 +1008,6 @@ a {
             }
         }
     }
-    
 }
 
 @media screen and (max-width: 450px) {
@@ -1083,7 +1061,7 @@ a {
             .descripton {
                 font-size: 13px !important;
             }
-            button{
+            button {
                 margin-top: 20px !important;
                 font-size: 12px !important;
                 padding: 10px !important;

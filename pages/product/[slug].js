@@ -2,6 +2,9 @@ import { Product } from "@/components";
 import { useStateContext } from "@/context/StateContext";
 import { client, urlFor } from "@/lib/client";
 import React, { useState } from "react";
+
+import Marquee from "react-fast-marquee";
+
 import {
     AiFillStar,
     AiOutlineMinus,
@@ -12,26 +15,34 @@ import {
 const ProductDetails = ({ productsData, productData }) => {
     const { image, name, details, price } = productData;
 
-    const [index, setIndex] = useState(0)
-    const {decQty, incQty, qty, onAdd, setShowCart} = useStateContext()
+    const [index, setIndex] = useState(0);
+    const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
 
-    const handleBuyNow = () =>{
-        onAdd(productData, qty)
-        setShowCart(true)
-    }
+    const handleBuyNow = () => {
+        onAdd(productData, qty);
+        setShowCart(true);
+    };
     return (
         <div>
             <div className="product-detail-container">
                 <div>
                     <div className="image-container">
-                        <img src={urlFor(image && image[index])} className="product-detail-image"/>
+                        <img
+                            src={urlFor(image && image[index])}
+                            className="product-detail-image"
+                        />
                     </div>
                     <div className="small-images-container">
                         {image?.map((item, i) => (
-                            <img src={urlFor(item)}
-                            key={i}
-                            className={i === index ? 'small-image selected-image' : 'small-image'}
-                            onMouseEnter={() => setIndex(i)}
+                            <img
+                                src={urlFor(item)}
+                                key={i}
+                                className={
+                                    i === index
+                                        ? "small-image selected-image"
+                                        : "small-image"
+                                }
+                                onMouseEnter={() => setIndex(i)}
                             />
                         ))}
                     </div>
@@ -57,29 +68,40 @@ const ProductDetails = ({ productsData, productData }) => {
                             <span className="minus" onClick={decQty}>
                                 <AiOutlineMinus />
                             </span>
-                            <span className="num">
-                                {qty}
-                            </span>
+                            <span className="num">{qty}</span>
                             <span className="plus" onClick={incQty}>
                                 <AiOutlinePlus />
                             </span>
                         </p>
                     </div>
                     <div className="buttons">
-                        <button type="button" className="add-to-cart" onClick={() => onAdd(productData,qty )}>Add to Cart</button>
-                        <button type="button" className="buy-now" onClick={handleBuyNow}>Buy now</button>
+                        <button
+                            type="button"
+                            className="add-to-cart"
+                            onClick={() => onAdd(productData, qty)}
+                        >
+                            Add to Cart
+                        </button>
+                        <button
+                            type="button"
+                            className="buy-now"
+                            onClick={handleBuyNow}
+                        >
+                            Buy now
+                        </button>
                     </div>
                 </div>
             </div>
             <div className="maylike-products-wrapper">
                 <h2>You may also like</h2>
-                <div className="marquee">
-                    <div className="maylike-products-container track">
-                        {productsData.map((product) => (
-                            <Product key={product._id} product={product}/>
-                        ))}
-                    </div>
-                </div>
+                <Marquee className="marquee" pauseOnHover={true}>
+                    {productsData.map((product) => (
+                        <div className="marquee-product">
+                        <Product key={product._id} product={product} />
+
+                        </div>
+                    ))}
+                </Marquee>
             </div>
         </div>
     );
