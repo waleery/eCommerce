@@ -16,7 +16,7 @@ const Home = ({ productsData, bannerData }) => {
             <div className="products-container">
                 {productsData?.map((product) => <Product key={product._id} product={product} />)}
             </div>
-            <FooterBanner fotterBanner={bannerData && bannerData[0]} />
+            <FooterBanner fotterBanner={bannerData && bannerData[1]} />
         </>
     );
 };
@@ -25,7 +25,10 @@ export const getServerSideProps = async () => {
     //grab all the products from sanity dashboard
     const queryProducts = '*[_type == "product"]';
 
-    const productsData = await client.fetch(queryProducts);
+    const allProducts = await client.fetch(queryProducts);
+
+    const shuffledProducts = [...allProducts].sort(() => Math.random() - 0.5)
+    const productsData = shuffledProducts.slice(0,5)
 
     //grab all the banner data from sanity dashboard
     const queryBanner = '*[_type == "banner"]';
