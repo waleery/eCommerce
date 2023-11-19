@@ -196,7 +196,7 @@ a {
     background-color: var(--heroBanner-bgcolor);
     border-radius: 15px;
     position: relative;
-    height: 500px;
+    height: 550px;
     line-height: 0.9;
     width: 100%;
 
@@ -775,7 +775,7 @@ a {
         max-height: fit-content;
         line-height: 1.1;
         padding: 50px 30px 10px 30px;
-        height: 450px;
+        height: 500px;
 
         h1 {
             font-size: 100px;
@@ -795,7 +795,7 @@ a {
             z-index: 10000;
         }
         .desc {
-            bottom: 40px;
+            bottom: 30px;
         }
     }
 
@@ -925,6 +925,7 @@ a {
 @media screen and (max-width: 650px) {
     .footer-banner-container {
         .banner-desc {
+            justify-content: center;
             .footer-banner-image {
                 height: 400px;
                 width: 400px;
@@ -932,11 +933,9 @@ a {
                 left: 40% !important;
             }
             .left {
-                margin-right: 250px;
+                margin-right:80%;
             }
-            .right {
-                margin-left: 50px;
-            }
+
             .left,
             .right {
                 h3 {
@@ -971,7 +970,6 @@ a {
 @media screen and (max-width: 550px) {
     .hero-banner-container {
         padding: 50px 30px 10px 30px;
-        height: 400px;
 
         .hero-banner-image {
             max-width: 300px !important;
@@ -1044,9 +1042,6 @@ a {
                 }
             }
 
-            .right {
-                margin-left: 40px;
-            }
         }
     }
     .success-wrapper,
