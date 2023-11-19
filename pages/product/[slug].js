@@ -96,8 +96,8 @@ const ProductDetails = ({ productsData, productData }) => {
                 <h2>You may also like</h2>
                 <Marquee className="marquee" pauseOnHover={true}>
                     {productsData.map((product) => (
-                        <div className="marquee-product">
-                        <Product key={product._id} product={product} />
+                        <div key={product._id} className="marquee-product">
+                        <Product  product={product} />
 
                         </div>
                     ))}
