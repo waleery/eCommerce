@@ -39,7 +39,10 @@ const Cart = () => {
                 <button
                     type="button"
                     className="cart-heading"
-                    onClick={() => setShowCart(false)}
+                    onClick={() => {
+                        setShowCart(false)
+                        document.body.classList.remove('show-cart')
+                    }}
                 >
                     <AiOutlineLeft />
                     <span className="heading">Your Cart</span>
@@ -53,7 +56,10 @@ const Cart = () => {
                         <h3>Your shopping cart is empty</h3>
                             <button
                                 type="button"
-                                onClick={() => setShowCart(false)}
+                                onClick={() => {
+                                    setShowCart(false)
+                                    document.body.classList.remove('show-cart')
+                                }}
                                 className="btn"
                             >
                                 Continue Shopping

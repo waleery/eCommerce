@@ -21,6 +21,7 @@ const ProductDetails = ({ productsData, productData }) => {
     const handleBuyNow = () => {
         onAdd(productData, qty);
         setShowCart(true);
+        document.body.classList.add('show-cart')
     };
     return (
         <div>

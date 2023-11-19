@@ -153,11 +153,13 @@ a {
         }
 
         .left p {
-            margin: 18px;
+            margin: 18px 0 18px 18px;
+            font-weight: 150;
         }
 
         .right {
             line-height: 1.4;
+            font-weight: 150;
 
             h3 {
                 font-weight: 800;
@@ -771,6 +773,9 @@ a {
 }
 
 @media screen and (max-width: 800px) {
+    body.show-cart {
+        overflow: hidden;
+    }
     .hero-banner-container {
         max-height: fit-content;
         line-height: 1.1;
@@ -803,7 +808,7 @@ a {
         height: fit-content;
         margin-top: 80px;
 
-        padding: 30px 30px;
+        padding: 30px 30px 30px 20px;
 
         .banner-desc {
             gap: 20px;
@@ -998,7 +1003,7 @@ a {
             .left,
             .right {
                 h3 {
-                    font-size: 30px !important;
+                    font-size: 40px !important;
                 }
                 p {
                     font-size: 15px !important;
@@ -1035,7 +1040,7 @@ a {
             .left,
             .right {
                 h3 {
-                    font-size: 27px !important;
+                    font-size: 35px !important;
                 }
                 p {
                     font-size: 15px !important;
