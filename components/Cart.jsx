@@ -77,7 +77,7 @@ const Cart = () => {
                                         <h4>{item.price}$</h4>
                                     </div>
                                     <div className="bottom">
-                                        <div style={{display:"flex", justifyContent:"space-between", width:"100%"}}>
+                                        <div style={{display:"flex", justifyContent:"space-between", alignItems:'center', width:"100%"}}>
                                             <p className="quantity-desc">
                                                 <span
                                                     className="minus"
