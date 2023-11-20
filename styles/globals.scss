@@ -650,13 +650,13 @@ a {
 .success-wrapper,
 .cancel-wrapper {
     background-color: white;
-    min-height: 100%;
-
+    min-height: 81vh;
+    display: flex;
+    align-items: center;
     .success,
     .cancel {
         width: 700px;
         margin: auto;
-        margin-top: 160px;
         background-color: #dcdcdc;
         padding: 50px;
         border-radius: 15px;
@@ -931,9 +931,11 @@ a {
 
     .success-wrapper,
     .cancel-wrapper {
+
+        
         .success,
         .cancel {
-            width: 600px !important;
+            width: 600px ;
             h2 {
                 font-size: 30px;
             }
