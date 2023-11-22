@@ -1,40 +1,50 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center" id="title">E-Commerce Store</h1>
 
-## Getting Started
+<p align="center"><img src="https://i.ibb.co/NmTdnnD/Zrzut-ekranu-2023-11-22-o-23-52-29.png" alt="project-image"></p>
 
-First, run the development server:
+<p id="description">Full Stack ECommerce Application with Stripe &amp; Sanity</p>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<h2>🚀 Demo</h2>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[https://e-commerce-zeta-sepia.vercel.app/](https://e-commerce-zeta-sepia.vercel.app/)
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+<h2>💻 Built with</h2>
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Technologies used in the project:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+*   Next.js
+*   Sanity.io
+*   Stripe
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+<h2>🛠️ Installation Steps:</h2>
 
-## Learn More
+<p>1. Install dependencies</p>
 
-To learn more about Next.js, take a look at the following resources:
+<p>2. Create sanity.io instance and paste in .env keys</p>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<p>3. Create Stripe account</p>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<p>4. Create shipping methods in Stripe</p>
 
-## Deploy on Vercel
+<p>5. Paste Sanity key in .env</p>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<h2>Project Screenshots:</h2>
+
+<img src="https://i.ibb.co/WVpR4w8/Zrzut-ekranu-2023-11-22-o-23-53-46.png" alt="project-screenshot" width="100%" height="100%">
+<br/>
+<img src="https://i.ibb.co/TLNsFzW/Zrzut-ekranu-2023-11-22-o-23-54-38.png" alt="project-screenshot" width="100%" height="100%">
+<br/>
+<img src="https://i.ibb.co/McHMv99/Zrzut-ekranu-2023-11-22-o-23-57-59.png" alt="project-screenshot" width="49%" height="100%">
+<img src="https://i.ibb.co/W20spXQ/Zrzut-ekranu-2023-11-22-o-23-56-03.png" alt="project-screenshot" width="49%" height="100%">
+<br/>
+<img src="https://i.ibb.co/WHmYxpc/Zrzut-ekranu-2023-11-22-o-23-57-07.png" alt="project-screenshot" width="100%" height="100%">
+<br/>
+<img src="https://i.ibb.co/LZtnjxf/Zrzut-ekranu-2023-11-23-o-00-01-49.png" alt="project-screenshot" width="100%" height="100%">
+<br/>
+<img src="https://i.ibb.co/PDS1HXQ/Zrzut-ekranu-2023-11-23-o-00-04-04.png" alt="project-screenshot" width="100%" height="100%">
+
+
+
+  
+  
